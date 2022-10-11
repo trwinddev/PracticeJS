@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+body {
+  line-height: 1.5;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+}
+
+.modal.is-show {
+  opacity: 1;
+}
+
+.modal-content {
+  max-width: 600px;
+  padding: 50px;
+  border-radius: 20px;
+  background-color: white;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #999;
+}
+
+.modal-desc {
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.modal-action {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 20px;
+}
+
+.modal-submit,
+.modal-cancel {
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #999;
+}
+
+.modal-submit {
+  background-color: #3d6ef7;
+  color: white;
+}
